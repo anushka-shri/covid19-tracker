@@ -2,7 +2,17 @@
   margin: 0;
 }
 
+body{
+  background:rgb(241, 240, 240);
+}
+
 .App_header{
+  display:flex;
+  justify-content: space-between;
+}
+
+.App_stats{
+  width:60vw;
   display:flex;
   justify-content: space-between;
 }
