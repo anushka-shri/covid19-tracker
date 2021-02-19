@@ -2,17 +2,39 @@
   margin: 0;
 }
 
+.App{
+  display: flex;
+  justify-content: space-evenly;
+  padding:30px;
+}
 body{
   background:rgb(241, 240, 240);
+}
+
+.App_left{
+  flex: 0.7;
 }
 
 .App_header{
   display:flex;
   justify-content: space-between;
+ transform: translate(-1%,0);
+  
 }
+
+
 
 .App_stats{
   width:60vw;
   display:flex;
   justify-content: space-between;
+}
+
+
+
+@media (max-width:900px) {
+
+  .App{
+    flex-direction: column;
+  }
 }
