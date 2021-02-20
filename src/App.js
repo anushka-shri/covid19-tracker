@@ -10,6 +10,7 @@ import {
 	CardContent,
 } from '@material-ui/core';
 import InfoBox from './components/infoBox';
+import { sortData } from './components/Utils/utils';
 
 const App = () => {
 	const [country, setInputCountry] = useState('worldwide');
@@ -34,15 +35,15 @@ const App = () => {
 						name: country.country,
 						value: country.countryInfo.iso2,
 					}));
+
+					const sortedData = sortData(data);
 					setCountries(countries);
-					setTabledata(data)
+					setTabledata(sortedData);
 				});
 		};
 
 		getCountriesData();
 	}, []);
-
-	
 
 	const onCountryChange = async (e) => {
 		const countryCode = e.target.value;
@@ -56,7 +57,6 @@ const App = () => {
 			.then((data) => {
 				setInputCountry(countryCode);
 				setCountryInfo(data);
-			
 			});
 	};
 
@@ -100,7 +100,7 @@ const App = () => {
 			<Card className='App_right'>
 				<CardContent>
 					<h2>Live Cases by country</h2>
-					<Table countries={tableData}/>
+					<Table countries={tableData} />
 					<h2>Graph</h2>
 				</CardContent>
 			</Card>
