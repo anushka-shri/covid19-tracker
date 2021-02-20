@@ -10,6 +10,7 @@ import {
 	CardContent,
 } from '@material-ui/core';
 import InfoBox from './components/infoBox';
+import Line from './components/LineGraph'
 import { sortData } from './components/Utils/utils';
 
 const App = () => {
@@ -101,7 +102,8 @@ const App = () => {
 				<CardContent>
 					<h2>Live Cases by country</h2>
 					<Table countries={tableData} />
-					<h2>Graph</h2>
+					<h2>Trends in past 3months</h2>
+					<Line />
 				</CardContent>
 			</Card>
 		</div>
