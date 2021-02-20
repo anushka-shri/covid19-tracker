@@ -5,12 +5,12 @@ function LineGraph() {
 
     const [data, setData] = useState([])
 
-    useEffect(() => {
+    // useEffect(() => {
        
-        fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
-            .then((response) => response.json())
-             .then((data) =>)
-    })
+    //     fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
+    //         .then((response) => response.json())
+    //          .then((data) =>)
+    // })
 
     //https://disease.sh/v3/covid-19/historical/all?lastdays=120
     return (
