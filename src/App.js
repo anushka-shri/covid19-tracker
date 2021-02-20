@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Map from './components/Map';
+import Table from './components/Table';
 import './App.css';
 import {
 	MenuItem,
@@ -14,6 +15,7 @@ const App = () => {
 	const [country, setInputCountry] = useState('worldwide');
 	const [countryInfo, setCountryInfo] = useState({});
 	const [countries, setCountries] = useState([]);
+	const [tableData, setTabledata] = useState([]);
 
 	useEffect(() => {
 		fetch('https://disease.sh/v3/covid-19/all')
@@ -32,7 +34,8 @@ const App = () => {
 						name: country.country,
 						value: country.countryInfo.iso2,
 					}));
-					 setCountries(countries);
+					setCountries(countries);
+					setTabledata(data)
 				});
 		};
 
@@ -53,6 +56,7 @@ const App = () => {
 			.then((data) => {
 				setInputCountry(countryCode);
 				setCountryInfo(data);
+			
 			});
 	};
 
@@ -95,7 +99,8 @@ const App = () => {
 
 			<Card className='App_right'>
 				<CardContent>
-					<h2>Table</h2>
+					<h2>Live Cases by country</h2>
+					<Table countries={tableData}/>
 					<h2>Graph</h2>
 				</CardContent>
 			</Card>
