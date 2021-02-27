@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 import InfoBox from './components/infoBox';
 import Line from './components/LineGraph'
-import { sortData } from './components/Utils/utils';
+import { sortData,prettyPrintStat } from './components/Utils/utils';
 import 'leaflet/dist/leaflet.css'
 
 const App = () => {
@@ -89,19 +89,27 @@ const App = () => {
 				</div>
 				<div className='App_stats'>
 					<InfoBox
-						title='Coronavirus Cases'
+						isRed
+						active={casesType === 'cases'}
+						onClick={(e) => setCasesType('cases')}
+						title='Covid Cases'
 						cases={countryInfo.todayCases}
-						total={countryInfo.cases}
+						total={prettyPrintStat(countryInfo.cases)}
 					/>
 					<InfoBox
+						active={casesType === 'recovered'}
+						onClick={(e) => setCasesType('recovered')}
 						title='Recovered'
 						cases={countryInfo.todayRecovered}
-						total={countryInfo.recovered}
+						total={prettyPrintStat(countryInfo.recovered)}
 					/>
 					<InfoBox
+						isRed
+						active={casesType === 'deaths'}
+						onClick={(e) => setCasesType('deaths')}
 						title='Deaths'
 						cases={countryInfo.todayDeaths}
-						total={countryInfo.deaths}
+						total={prettyPrintStat(countryInfo.deaths)}
 					/>
 				</div>
 				<Map countries={mapCountries} center={mapCenter}
