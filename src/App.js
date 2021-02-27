@@ -12,6 +12,7 @@ import {
 import InfoBox from './components/infoBox';
 import Line from './components/LineGraph'
 import { sortData } from './components/Utils/utils';
+import 'leaflet/dist/leaflet.css'
 
 const App = () => {
 	const [country, setInputCountry] = useState('worldwide');
