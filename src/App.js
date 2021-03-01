@@ -76,15 +76,15 @@ const App = () => {
 		<div className='App'>
 			<div className='App_left'>
 				<div className='App_header'>
-					<h1>COVID-19 Tracker</h1>
+					<h1 className='App_title'>COVID-19  Tracker</h1>
 					<FormControl className='App_dropdown'>
 						<Select
 							variant='outlined'
 							value={country}
 							onChange={onCountryChange}>
-							<MenuItem value='worldwide'>Worldwide</MenuItem>
+							<MenuItem className='App_menuitem' value='worldwide'>Worldwide</MenuItem>
 							{countries.map((country) => (
-								<MenuItem value={country.value}>{country.name}</MenuItem>
+								<MenuItem className='App_menuitem' value={country.value}>{country.name}</MenuItem>
 							))}
 						</Select>
 					</FormControl>

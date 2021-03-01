@@ -8,12 +8,23 @@
   padding:30px;
 }
 body{
-  background:rgb(241, 240, 240);
+  background:rgb(0, 0, 0);
+}
+
+.App_title{
+  color: white;
 }
 
 .App_left{
   flex: 0.6;
 }
+
+.App_dropdown{
+  background:rgb(207, 207, 207);
+  
+  border-radius:5px;
+}
+
 
 .App_header{
   display:flex;
@@ -21,6 +32,7 @@ body{
  transform: translate(-1%,0);
   
 }
+
 .App_right{
   height: 600px;
 }
