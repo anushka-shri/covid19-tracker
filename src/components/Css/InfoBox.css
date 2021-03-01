@@ -5,7 +5,7 @@
 }
 
 .InfoBox:not(:last-child){
-    margin-right: 70px;
+    margin-right: 1vw;
 }
 
 .InfoBox:first-child{

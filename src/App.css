@@ -51,5 +51,16 @@ body{
 
   .App{
     flex-direction: column;
+    margin-top:20px;
   }
+  .App_right{
+  height: 500px;
+  margin-top:20px;
+}
+.App_stats{
+  width:90vw;
+  font-size:0.8rem;
+  display:flex;
+  justify-content: space-between;
+}
 }

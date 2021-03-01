@@ -40,3 +40,10 @@
   font-size: 14px;
   margin-top: 5px;
 }
+
+@media (max-width:900px) {
+
+  .Map{
+    height:300px;
+  }
+}
