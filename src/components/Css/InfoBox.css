@@ -8,6 +8,19 @@
     margin-right: 70px;
 }
 
+.InfoBox:first-child{
+  background-color: rgb(248, 156, 156);
+  color: white;
+}
+
+.InfoBox:nth-child(2)
+{
+  background-color: rgb(184, 250, 195);
+}
+.InfoBox:last-child{
+  background-color: #e97878;
+  color: white;
+}
 
 
 .InfoBox--selected {
@@ -30,5 +43,5 @@
     justify-content:space-between;
 }
 .title{
-    color:rgb(116, 116, 116)
+    color:rgb(0, 0, 0)
 }

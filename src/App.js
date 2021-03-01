@@ -19,7 +19,9 @@ const App = () => {
 	const [countryInfo, setCountryInfo] = useState({});
 	const [countries, setCountries] = useState([]);
 	const [tableData, setTabledata] = useState([]);
-	const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
+
+	
+	const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.7496 });
 	const [mapZoom, setMapZoom] = useState(3);
 	const [mapCountries, setMapCountries] = useState([])
 	 const [casesType, setCasesType] = useState("cases");
@@ -112,7 +114,9 @@ const App = () => {
 						total={prettyPrintStat(countryInfo.deaths)}
 					/>
 				</div>
-				<Map countries={mapCountries} center={mapCenter}
+				
+				<Map countries={mapCountries}
+					center={mapCenter}
 					zoom={mapZoom}
 					casesType={casesType} />
 			</div>
@@ -121,8 +125,8 @@ const App = () => {
 				<CardContent>
 					<h2>Live Cases by country</h2>
 					<Table countries={tableData} />
-					<h2>Trends in past 3months</h2>
-					<Line />
+					{/* <h2>Trends in past 3months</h2>
+					<Line /> */}
 				</CardContent>
 			</Card>
 		</div>

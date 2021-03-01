@@ -21,6 +21,9 @@ body{
  transform: translate(-1%,0);
   
 }
+.App_right{
+  height: 600px;
+}
 
 
 
