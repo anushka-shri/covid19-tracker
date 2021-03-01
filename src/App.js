@@ -10,7 +10,7 @@ import {
 	CardContent,
 } from '@material-ui/core';
 import InfoBox from './components/infoBox';
-import Line from './components/LineGraph'
+// import Line from './components/LineGraph'
 import { sortData,prettyPrintStat } from './components/Utils/utils';
 import 'leaflet/dist/leaflet.css'
 
